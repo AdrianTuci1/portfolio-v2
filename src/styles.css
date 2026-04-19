@@ -1,0 +1,101 @@
+:root {
+  --paper: #f8f9f8;
+  --ink: #111113;
+  --muted: #8a909c;
+  --line: #dde3ed;
+  --line-strong: #bcc9da;
+  --blue: #071dff;
+  --label-bg: #e8f2ff;
+  --label-ink: #0619b8;
+  --purple: #6a35ff;
+  --green: #00a36c;
+  --soft-green: #e6f4ed;
+  --soft-blue: #eef2ff;
+  --topology: #dce4e2;
+  --topology-text: #3340e7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--paper);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--paper);
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.blink-link {
+  transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease;
+}
+
+.blink-link:hover,
+.blink-link:focus-visible {
+  animation: blink-to-blue 280ms steps(2, end) forwards;
+  color: #ffffff;
+  outline: none;
+}
+
+@keyframes blink-to-blue {
+  0% {
+    color: var(--ink);
+    background-color: transparent;
+  }
+
+  35% {
+    color: var(--paper);
+    background-color: var(--blue);
+  }
+
+  70% {
+    color: var(--green);
+    background-color: transparent;
+  }
+
+  100% {
+    color: #ffffff;
+    background-color: var(--blue);
+  }
+}
+
+@media (max-width: 980px) {
+  body {
+    overflow: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}

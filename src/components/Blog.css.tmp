@@ -1,0 +1,7 @@
+.blog-(layout|left-panel|sidebar|sidebar-toc-container|sidebar-toc|toc-group|toc-eyebrow|toc-links|toc-link|page) { ... }
+
+/* ... (previous styles kept until return-banner-container) */
+
+.return-banner-(container|link|inner|text|secondary-text) { ... }
+
+/* ... (rest of the file) */

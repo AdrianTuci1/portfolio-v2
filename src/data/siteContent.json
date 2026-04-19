@@ -1,0 +1,124 @@
+{
+  "profile": {
+    "name": "Tucicovenco Adrian",
+    "role": "Machine Learning & AI Systems",
+    "imageAlt": "Portrait placeholder for Tucicovenco Adrian",
+    "intro": [
+      "I am a Software Engineer based in Bucharest, Romania. My research focuses on Human-Computer Interaction (HCI) and exploring ways to integrate Machine Learning and AI Systems into effective solutions.",
+      "My work focuses on building tools that are powerful, clear, and easy to use, ensuring that intent remains at the heart of the experience.",
+      "I currently work as a Machine Learning Researcher at Staticlabs, where I focus on the craft of grounding experimental intelligence in production-ready systems.",
+      "I also work as a Solutions Architect at V8media, where I architect the digital infrastructure that powers complex applications for various clients and initiatives.",
+      "Outside of code, I find my inspiration in the stillness of photography and the rhythm of hiking through the mountains.",
+      "I’m always open to new challenges and ideas—feel free to reach out at adrian@tuci.dev."
+    ]
+  },
+  "social": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/",
+      "icon": "in"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/AdrianTuci1",
+      "icon": "gh"
+    },
+    {
+      "label": "Mail",
+      "url": "mailto:adrian@tuci.dev",
+      "icon": "@"
+    }
+  ],
+  "tags": [
+    "AI SYSTEMS",
+    "MACHINE LEARNING",
+    "PHOTOGRAHY",
+    "LOFI",
+    "PRODUCT",
+    "RESEARCH",
+    "INTERFACES",
+    "AUTOMATION"
+  ],
+  "menus": [
+    {
+      "id": "experience",
+      "title": "Experience",
+      "items": [
+        {
+          "title": "Machine Learning Researcher",
+          "subtitle": "Staticlabs",
+          "period": "Present",
+          "meta": "2026 / now",
+          "url": "https://staticlabs.ro"
+        },
+        {
+          "title": "Solutions Architect",
+          "subtitle": "V8media",
+          "period": "Present",
+          "meta": "2024 / 2026",
+          "url": "https://v8media.ro"
+        },
+        {
+          "title": "Self employed",
+          "subtitle": "Independent projects and consulting",
+          "period": "Ongoing",
+          "meta": "remote",
+          "noHover": true
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "items": [
+        {
+          "title": "ML/AI Engineering",
+          "subtitle": "Applied intelligence and automation",
+          "period": "Present",
+          "meta": "2025/09",
+          "noHover": true
+        },
+        {
+          "title": "Information Networks",
+          "subtitle": "Distributed systems and communication",
+          "period": "2025/08",
+          "meta": "2024/08",
+          "noHover": true
+        },
+        {
+          "title": "Computer Science",
+          "subtitle": "Foundational systems and algorithms",
+          "period": "2024/08",
+          "meta": "2023/08",
+          "noHover": true
+        }
+      ]
+    },
+    {
+      "id": "blog",
+      "title": "Blog",
+      "items": []
+    },
+    {
+      "id": "media",
+      "title": "Media",
+      "items": [
+        {
+          "title": "Think like an engineer",
+          "subtitle": "Guru Madhavan",
+          "url": "https://carturesti.ro/carte/think-like-an-engineer-2331317?lang=en-US",
+          "image": "/think.png"
+        },
+        {
+          "title": "Rare Psalms Collection Vol.5",
+          "subtitle": "Macroblank",
+          "url": "https://youtu.be/4xyA1LejE-o?si=DKRTaXDblho_GZOz",
+          "image": "/rarepsalms.png"
+        }
+      ]
+    }
+  ],
+  "blog": {
+    "returnLabel": "Return to main page"
+  }
+}

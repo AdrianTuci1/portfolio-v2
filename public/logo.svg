@@ -1,0 +1,17 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Square 1 (Top Left) -->
+  <rect x="1" y="1" width="18" height="18" fill="#0825d8" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+  <text x="10" y="14" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="700" fill="rgba(255,255,255,0.94)" text-anchor="middle">@</text>
+  
+  <!-- Square 2 (Top Right) -->
+  <rect x="21" y="1" width="18" height="18" fill="#4c23d1" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+  <text x="30" y="14" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="700" fill="rgba(255,255,255,0.94)" text-anchor="middle">#</text>
+  
+  <!-- Square 3 (Bottom Left) -->
+  <rect x="1" y="21" width="18" height="18" fill="#008b61" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+  <text x="10" y="34" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="700" fill="rgba(255,255,255,0.94)" text-anchor="middle">*</text>
+  
+  <!-- Square 4 (Bottom Right) -->
+  <rect x="21" y="21" width="18" height="18" fill="#06167a" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+  <text x="30" y="34" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="700" fill="rgba(255,255,255,0.94)" text-anchor="middle">:</text>
+</svg>

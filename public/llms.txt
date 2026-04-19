@@ -1,0 +1,23 @@
+# Tucicovenco Adrian | Portfolio & Research
+
+> Software Engineer and Machine Learning Researcher based in Bucharest, Romania. Specializing in Human-Computer Interaction (HCI) and Machine Learning Systems architecture.
+
+## Core Expertise
+- **Machine Learning**: Production-ready AI systems, grounding experimental intelligence.
+- **HCI**: Building intuitive interfaces where user intent is central.
+- **Software Architecture**: Distributed systems and complex web infrastructure.
+
+## Current Roles
+- **Machine Learning Researcher** at Staticlabs (Bucharest, RO).
+- **Solutions Architect** at V8media.
+
+## Key Content
+- [Home](https://tuci.dev/): Professional profile and bio.
+- [Blog](https://tuci.dev/blog): Research notes and technical essays.
+    - [Grounding Intelligence](https://tuci.dev/blog/grounding-intelligence): Notes on production ML.
+    - [The New Age](https://tuci.dev/blog/the-new-age): Reflections on modern architecture.
+
+## Contact & Profiles
+- Email: adrian@tuci.dev
+- GitHub: https://github.com/AdrianTuci1
+- LinkedIn: https://www.linkedin.com/in/adriantuci/

@@ -1,0 +1,181 @@
+/*
+ * DRAWER LIGHTS LOGIC
+ * This file contains the visual state management for the 3 dots (lights)
+ * on the right side of the Drawer Menu triggers.
+ */
+
+.drawer-dots {
+  display: inline-flex;
+  justify-self: end;
+  align-items: center;
+  height: 1.24rem;
+  /* Approximate 1px tighter gap than before */
+  gap: 0.15rem;
+}
+
+.drawer-dot {
+  display: block;
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 50%;
+  background: var(--blue);
+  opacity: 0.1;
+  /* ~30% for side dots */
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* 
+ * 1. NOT HOVERED STATE 
+ * - 3 dots visible in blue.
+ * - Side dots: 30% opacity.
+ * - Center dot (nth-child 2): 70% opacity.
+ * - Center dot of menu 1 and 3 blinks at 100% blue periodically.
+ */
+.drawer-dot:nth-child(2) {
+  opacity: 0.2;
+}
+
+/* Target the first and third drawer when they are closed and not hovered */
+.drawer:nth-child(1):not(.is-open):not(:hover) .drawer-trigger .drawer-dot:nth-child(2),
+.drawer:nth-child(3):not(.is-open):not(:hover) .drawer-trigger .drawer-dot:nth-child(2) {
+  animation: periodic-flicker 5s infinite;
+}
+
+/*
+ * 2. HOVERED BEHAVIOR (Closed Menu)
+ * - Sequential blink plays ONCE: Center -> Left -> Right.
+ */
+.drawer:not(.is-open) .drawer-trigger:hover .drawer-dot,
+.drawer:not(.is-open) .drawer-trigger:focus-visible .drawer-dot {
+  animation: dot-blink-blue 0.4s steps(2, end) forwards;
+  opacity: 1;
+}
+
+/* Sequence: Center (0ms) -> Left (80ms) -> Right (160ms) */
+.drawer:not(.is-open) .drawer-trigger:hover .drawer-dot:nth-child(2),
+.drawer:not(.is-open) .drawer-trigger:focus-visible .drawer-dot:nth-child(2) {
+  animation-delay: 0s;
+}
+
+.drawer:not(.is-open) .drawer-trigger:hover .drawer-dot:nth-child(1),
+.drawer:not(.is-open) .drawer-trigger:focus-visible .drawer-dot:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.drawer:not(.is-open) .drawer-trigger:hover .drawer-dot:nth-child(3),
+.drawer:not(.is-open) .drawer-trigger:focus-visible .drawer-dot:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+/*
+ * 3. DESCHIS (Open) BEHAVIOR
+ * - Side dots flicker briefly and disappear (opacity 0).
+ * - Center dot is fully visible (opacity 1) and remains blue.
+ * - Any periodic idling flicker is disabled while open.
+ */
+.drawer.is-open .drawer-dot:nth-child(1),
+.drawer.is-open .drawer-dot:nth-child(3) {
+  animation: dot-disappear-flicker 0.45s ease-out forwards;
+}
+
+.drawer.is-open .drawer-dot:nth-child(2) {
+  opacity: 1;
+  background: var(--blue);
+  animation: none;
+}
+
+/*
+ * 4. HOVERED + OPEN BEHAVIOR
+ * - Only the center dot flickers.
+ */
+.drawer.is-open .drawer-trigger:hover .drawer-dot:nth-child(2) {
+  animation: dot-flicker-open 0.4s infinite alternate;
+}
+
+
+/* --- ANIMATIONS --- */
+
+/* Periodic double-blink (not fluid) for idle state on specific menus */
+@keyframes periodic-flicker {
+
+  0%,
+  84%,
+  88%,
+  92%,
+  100% {
+    opacity: 0.4;
+    background: var(--blue) !important;
+  }
+
+  86%,
+  90% {
+    opacity: 1;
+    background: var(--blue) !important;
+  }
+}
+
+/* Rapid sharp flicker when hovering an already open menu (digital feel) */
+@keyframes dot-flicker-open {
+
+  0%,
+  45%,
+  55%,
+  100% {
+    opacity: 1;
+  }
+
+  50%,
+  95% {
+    opacity: 0.4;
+  }
+}
+
+/* Sequential blue blink on hover for closed menus */
+@keyframes dot-blink-blue {
+  0% {
+    background: #c3cfdd;
+    opacity: 0.15;
+  }
+
+  35% {
+    background: var(--blue);
+    opacity: 1;
+  }
+
+  70% {
+    background: transparent;
+    opacity: 0.1;
+  }
+
+  100% {
+    background: var(--blue);
+    opacity: 1;
+  }
+}
+
+/* Flicker effect before dots disappear when menu opens */
+@keyframes dot-disappear-flicker {
+  0% {
+    opacity: 0.3;
+  }
+
+  20% {
+    opacity: 0.8;
+  }
+
+  40% {
+    opacity: 0.1;
+  }
+
+  60% {
+    opacity: 0.6;
+  }
+
+  80% {
+    opacity: 0.05;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

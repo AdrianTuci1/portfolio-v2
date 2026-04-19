@@ -1,0 +1,65 @@
+/* MetaZone styles extracted from DrawerMenu */
+.drawer-meta-zone {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1.45rem;
+  padding: 0.15rem 0.2rem 0.55rem 0.45rem;
+  color: #6f7680;
+  font-size: 0.86rem;
+  letter-spacing: 0;
+  line-height: 1.28;
+}
+
+.drawer-meta-left {
+  display: flex;
+  gap: 0.82rem;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.drawer-meta-right {
+  display: grid;
+  gap: 0.28rem;
+  justify-items: end;
+  text-align: right;
+  color: #818893;
+}
+
+.drawer-meta-right p {
+  margin: 0;
+  color: #616875;
+}
+
+.drawer-meta-right span {
+  font-size: 0.86rem;
+}
+
+.meta-blue {
+  color: var(--blue);
+}
+
+.meta-book {
+  margin-top: 0.2rem;
+}
+
+.meta-book a {
+  text-decoration: underline;
+  text-decoration-color: #818893;
+  text-underline-offset: 3px;
+  transition: all 0.2s ease;
+}
+
+.meta-book a:hover {
+  color: var(--blue);
+  text-decoration-color: var(--blue);
+}
+
+
+
+/* Specific adjustment for blog post usage */
+.post-page .drawer-meta-zone {
+  margin-top: 5rem;
+  border-top: 1px solid #eef2f6;
+  padding-top: 1.5rem;
+}

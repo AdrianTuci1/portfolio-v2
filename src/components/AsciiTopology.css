@@ -1,0 +1,38 @@
+.topology-panel {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(7, 29, 255, 0.13), transparent 32%),
+    linear-gradient(180deg, rgba(0, 163, 108, 0.12), transparent 42%),
+    var(--topology);
+  cursor: default;
+  isolation: isolate;
+  transition: filter 0.8s ease-in-out, transform 1.2s ease-in-out;
+}
+
+.topology-panel.is-loading {
+  filter: grayscale(1);
+  transform: scale(1.12);
+}
+
+.topology-panel::before {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0 44%, rgba(248, 249, 248, 0.72) 44% 45%, transparent 45%),
+    linear-gradient(0deg, transparent 0 64%, rgba(106, 53, 255, 0.16) 64% 65%, transparent 65%);
+  content: '';
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+}
+
+.topology-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: #070708;
+  pointer-events: none;
+}
