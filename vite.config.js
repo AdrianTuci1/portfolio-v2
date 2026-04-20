@@ -6,9 +6,18 @@ import { execSync } from 'child_process';
 const getBuildMetadata = () => {
   const isCI = process.env.CF_PAGES === '1' || process.env.GITHUB_ACTIONS === 'true';
 
-  let hash = Math.random().toString(36).substring(2, 7).toUpperCase();
-  if (process.env.CF_PAGES_COMMIT_SHA) hash = process.env.CF_PAGES_COMMIT_SHA.substring(0, 7);
-  else if (process.env.GITHUB_SHA) hash = process.env.GITHUB_SHA.substring(0, 7);
+  let hash = Math.random().toString(36).substring(2, 7).toLowerCase();
+
+  const envHash = process.env.CF_PAGES_COMMIT_SHA || process.env.GITHUB_SHA;
+  if (envHash) {
+    hash = envHash.substring(0, 7).toLowerCase();
+  } else {
+    try {
+      hash = execSync('git rev-parse --short HEAD').toString().trim().toLowerCase();
+    } catch (e) {
+      // Fallback to random if git is not available
+    }
+  }
 
   let contentDate = new Date().toDateString();
   if (isCI) {

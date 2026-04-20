@@ -179,7 +179,7 @@ export function AsciiTopology({ className = '', isLoading = false }) {
     const rect = event.currentTarget.getBoundingClientRect();
     pointerRef.current.target = {
       x: clamp((event.clientX - rect.left) / rect.width, 0, 1),
-      y: clamp((event.clientY - rect.top) / rect.height, 0, 1),
+      y: clamp((event.clientY - rect.top - 5) / rect.height, 0, 1),
     };
     pointerRef.current.active = true;
   };

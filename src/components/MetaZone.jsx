@@ -13,7 +13,7 @@ export function MetaZone() {
       </div>
       <div className="drawer-meta-right">
         <p>Portfolio v2 - <span className="meta-blue">Bucharest, Romania</span></p>
-        <span>Build: {import.meta.env.VITE_BUILD_INFO.buildTime} ({import.meta.env.VITE_BUILD_INFO.hash})</span>
+        <span>Build: {import.meta.env.VITE_BUILD_INFO.buildTime} ({import.meta.env.VITE_BUILD_INFO.hash.toLowerCase()})</span>
         <span>Content: {import.meta.env.VITE_BUILD_INFO.contentDate}</span>
       </div>
     </footer>
